@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gray-immunity"
+version = "1.0.0"
+description = "Individual-based stochastic epidemiological model treating immunity as a continuous variable (Journal of Biosciences, 2024)."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Milind Watve" },
+    { name = "Himanshu Bhisikar" },
+    { name = "Rohini Kharate" },
+    { name = "Srashti Bajpai" },
+]
+keywords = ["epidemiology", "stochastic-modeling", "agent-based-model", "immunity", "covid-19"]
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "scipy>=1.10.0",
+]
+
+[project.urls]
+Publication = "https://www.ias.ac.in/article/fulltext/jbsc/049/0010"
+DOI = "https://doi.org/10.1007/s12038-023-00382-y"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
