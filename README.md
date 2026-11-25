@@ -41,7 +41,8 @@ Incorporating SIEs produces qualitatively different epidemiological predictions 
 │   └── peak_extraction.py      # Empirical COVID-19 peak extraction (OWID data)
 ├── main.py                     # Main entry point (IDE-friendly)
 ├── data/                       # Empirical COVID-19 datasets (OWID)
-├── Results/                    # Generated figures and parameter sweep results
+├── results/                    # Generated figures and simulation outputs
+├── tests/                      # Unit tests
 ├── requirements.txt
 ├── CITATION.cff
 └── LICENSE
@@ -75,6 +76,14 @@ params = ModelParameters(N=5000, T=500, r=0.1, seed=42)
 result = run_simulation(params)
 plot_wave_dynamics(result, save_path="wave_dynamics.png")
 ```
+
+---
+
+## Sample Output
+
+![Wave Dynamics](results/wave_dynamics.png)
+
+![Immunity Distribution](results/immunity_distribution.png)
 
 ---
 

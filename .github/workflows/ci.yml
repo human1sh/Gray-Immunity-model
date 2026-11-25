@@ -16,5 +16,5 @@ jobs:
           python-version: "3.11"
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Run simulation smoke test
-        run: python -c "import sys; sys.path.insert(0, 'src'); from parameters import ModelParameters; from simulation import run_simulation; res = run_simulation(ModelParameters(N=500, T=50, seed=42)); print('Peak:', res.infected_counts.max())"
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
