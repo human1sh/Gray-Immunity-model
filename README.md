@@ -33,14 +33,14 @@ Incorporating SIEs produces qualitatively different epidemiological predictions 
 ## Repository Structure
 
 ```text
-├── src/                        # Simulation modules
+├── src/                        # Simulation & analysis modules
 │   ├── __init__.py
 │   ├── parameters.py           # ModelParameters dataclass
 │   ├── simulation.py           # Vectorized individual-based stochastic simulator
-│   └── visualization.py        # Wave dynamics & immunity distribution plots
+│   ├── visualization.py        # Wave dynamics & immunity distribution plots
+│   └── peak_extraction.py      # Empirical COVID-19 peak extraction (OWID data)
 ├── scripts/
 │   └── run_experiments.py      # CLI for running simulations & saving outputs
-├── Peak extraction/            # Empirical COVID-19 peak extraction (OWID data)
 ├── Results/                    # Generated figures and parameter sweep results
 ├── requirements.txt
 ├── CITATION.cff
