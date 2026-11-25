@@ -40,6 +40,7 @@ Incorporating SIEs produces qualitatively different epidemiological predictions 
 │   └── visualization.py        # Wave dynamics & immunity distribution plots
 ├── scripts/
 │   └── run_experiments.py      # CLI for running simulations & saving outputs
+├── Peak extraction/            # Empirical COVID-19 peak extraction (OWID data)
 ├── Results/                    # Generated figures and parameter sweep results
 ├── requirements.txt
 ├── CITATION.cff
