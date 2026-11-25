@@ -88,10 +88,10 @@ plot_wave_dynamics(result, save_path="wave_dynamics.png")
 
 This project evolved over roughly six months in mid-to-late 2021 before its peer-reviewed publication:
 
-- **May 2021 — Conceptualization:** Initial formulation of a non-compartmental, continuous-immunity epidemiological model (`Covid population immunity model`, `non compartmental model structure`).
-- **June 2021 — Mathematical Formalization:** Parameterization and LaTeX model specification (`Details.tex`, `parameters`).
-- **August 2021 — Simulation Sweeps & Manuscript Drafting:** Large-scale parameter sweeps across population sizes ($N = 5000, 10000$) and cross-immunity regimes ($0.0 \to 1.0$), alongside the first full manuscript draft (`gray immunity MS.docx`).
-- **September 2021 — Empirical Validation:** Stabilized the simulation codebase (`COVID-stable`) and extracted empirical COVID-19 wave peaks from Our World in Data across India, China, the UK, Spain, Poland, Indonesia, and Ukraine.
+- **May 2021 — Conceptualization:** Initial formulation of a non-compartmental, continuous-immunity epidemiological model.
+- **June 2021 — Mathematical Formalization:** Parameterization and LaTeX model specification.
+- **August 2021 — Simulation Sweeps & Manuscript Drafting:** Large-scale parameter sweeps across population sizes ($N = 5000, 10000$) and cross-immunity regimes ($0.0 \to 1.0$), alongside the first full manuscript draft.
+- **September 2021 — Empirical Validation:** Stabilized the simulation codebase and extracted empirical COVID-19 wave peaks from Our World in Data across India, China, the UK, Spain, Poland, Indonesia, and Ukraine.
 - **October–November 2021 — Preprint Release:** Posted as a preprint (`doi:10.20944/preprints202109.0162.v2`).
 - **January 2024 — Publication:** Published in *Journal of Biosciences*, Vol. 49, Article 10.
 
