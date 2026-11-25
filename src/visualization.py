@@ -45,27 +45,41 @@ def plot_immunity_distribution(
     save_path: str | None = None,
     show: bool = True,
 ) -> plt.Figure:
-    """Plot histograms of population ID_50 at selected time steps."""
+    """Plot a 3D histogram of population ID_50 across selected time steps."""
+    T = result.params.T
     if time_steps is None:
-        T = result.params.T
-        time_steps = [0, T // 4, T // 2, (3 * T) // 4, T]
+        time_steps = [int(round(x)) for x in np.linspace(T, 0, 6)]
 
-    fig, ax = plt.subplots(figsize=(10, 5))
-    for t in time_steps:
-        if 0 <= t <= result.params.T:
-            ax.hist(
-                result.id50_history[:, t],
-                bins=40,
-                alpha=0.45,
-                label=f"t = {t}",
-                density=True,
+    colors = ["orange", "green", "red", "gold", "magenta", "blue"]
+    nbins = 50
+    thresh = 200
+
+    fig = plt.figure(figsize=(10, 8))
+    ax = fig.add_subplot(111, projection="3d")
+
+    for idx, t in enumerate(time_steps):
+        if 0 <= t <= T:
+            arr = result.id50_history[:, t]
+            false_vals = arr[arr < thresh]
+            if len(false_vals) == 0:
+                continue
+            hist, xbins = np.histogram(false_vals, bins=nbins)
+            xs = (xbins[:-1] + xbins[1:]) / 2
+            width = (xbins[1] - xbins[0]) * 0.85 if len(xbins) > 1 else 2.0
+            ax.bar(
+                xs,
+                hist,
+                zs=t,
+                zdir="y",
+                width=width,
+                color=colors[idx % len(colors)],
+                alpha=0.85,
             )
 
-    ax.set_xlabel("Immunity Level ID50 (EU)")
-    ax.set_ylabel("Density")
-    ax.set_title("Population Immunity Distribution Over Time")
-    ax.legend()
-    ax.grid(linewidth=0.5, alpha=0.6)
+    ax.set_title("Histogram of $ID_{50}$ for Various Time Steps")
+    ax.set_xlabel("$ID_{50}$ (EU)")
+    ax.set_ylabel("Time step (t)")
+    ax.set_zlabel("Frequency")
 
     fig.tight_layout()
     if save_path:
