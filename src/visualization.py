@@ -2,11 +2,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-
-try:
-    from .simulation import SimulationResult
-except ImportError:
-    from simulation import SimulationResult
+from src.simulation import SimulationResult
 
 
 def plot_wave_dynamics(

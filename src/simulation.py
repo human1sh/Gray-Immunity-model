@@ -2,11 +2,7 @@
 
 from dataclasses import dataclass
 import numpy as np
-
-try:
-    from .parameters import ModelParameters
-except ImportError:
-    from parameters import ModelParameters
+from src.parameters import ModelParameters
 
 
 @dataclass
