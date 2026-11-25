@@ -58,13 +58,9 @@ Incorporating SIEs produces qualitatively different epidemiological predictions 
 pip install -r requirements.txt
 ```
 
-### 2. Run a Simulation via CLI
+### 2. Run the Simulation
 
-```bash
-python scripts/run_experiments.py -N 5000 -T 500 -r 0.1 --seed 42
-```
-
-Outputs (`infected_counts.csv`, `mean_id50.csv`, and `wave_dynamics.png`) are saved to `data/processed/` by default.
+Open [`main.py`](main.py) in your IDE, adjust the configuration constants at the top if desired, and click **Run** (or run `python main.py`). Outputs and plots are saved to `data/processed/`.
 
 ### 3. Use in Python
 
