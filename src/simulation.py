@@ -3,7 +3,10 @@
 from dataclasses import dataclass
 import numpy as np
 
-from .parameters import ModelParameters
+try:
+    from .parameters import ModelParameters
+except ImportError:
+    from parameters import ModelParameters
 
 
 @dataclass

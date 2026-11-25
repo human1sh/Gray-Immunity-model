@@ -3,7 +3,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from .simulation import SimulationResult
+try:
+    from .simulation import SimulationResult
+except ImportError:
+    from simulation import SimulationResult
 
 
 def plot_wave_dynamics(
