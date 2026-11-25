@@ -60,19 +60,7 @@ pip install -r requirements.txt
 
 ### 2. Run the Simulation
 
-Open [`main.py`](main.py) in your IDE, adjust the configuration constants at the top if desired (`POPULATION_SIZE`, `TIME_STEPS`, `RESTRICTION_PARAM`, `RANDOM_SEED`), and click **Run** (or run `python main.py`). Outputs and plots are saved to `results/`.
-
-### 3. Use in Python
-
-```python
-from src.parameters import ModelParameters
-from src.simulation import run_simulation
-from src.visualization import plot_wave_dynamics
-
-params = ModelParameters(N=5000, T=1000, r=0.1, seed=42)
-result = run_simulation(params)
-plot_wave_dynamics(result, save_path="wave_dynamics.png")
-```
+Open [`main.py`](main.py) in your IDE / text editor, adjust the configuration constants at the top if desired (`POPULATION_SIZE`, `TIME_STEPS`, `RESTRICTION_PARAM`, `RANDOM_SEED`), and click **Run** (or run `python main.py`) in the terminal. Outputs and plots are saved to `results/`.
 
 ---
 
@@ -111,6 +99,5 @@ If you use this code or model in your research, please cite:
   pages={10},
   year={2024},
   publisher={Springer},
-  doi={10.1007/s12038-023-00382-y}
-}
+  doi={10.1007/s12038-023-00382-y}}
 ```
