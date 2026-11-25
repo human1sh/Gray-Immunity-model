@@ -17,4 +17,4 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run simulation smoke test
-        run: python scripts/run_experiments.py -N 500 -T 50 -r 0.1 --seed 42 --no-plot
+        run: python -c "import sys; sys.path.insert(0, 'src'); from parameters import ModelParameters; from simulation import run_simulation; res = run_simulation(ModelParameters(N=500, T=50, seed=42)); print('Peak:', res.infected_counts.max())"

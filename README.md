@@ -39,8 +39,7 @@ Incorporating SIEs produces qualitatively different epidemiological predictions 
 │   ├── simulation.py           # Vectorized individual-based stochastic simulator
 │   ├── visualization.py        # Wave dynamics & immunity distribution plots
 │   └── peak_extraction.py      # Empirical COVID-19 peak extraction (OWID data)
-├── scripts/
-│   └── run_experiments.py      # CLI for running simulations & saving outputs
+├── main.py                     # Main entry point (IDE-friendly)
 ├── data/                       # Empirical COVID-19 datasets (OWID)
 ├── Results/                    # Generated figures and parameter sweep results
 ├── requirements.txt
