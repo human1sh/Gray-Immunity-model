@@ -33,7 +33,7 @@ Incorporating SIEs produces qualitatively different epidemiological predictions 
 ## Repository Structure
 
 ```text
-├── src/gray_immunity/          # Modular Python package
+├── src/                        # Simulation modules
 │   ├── __init__.py
 │   ├── parameters.py           # ModelParameters dataclass
 │   ├── simulation.py           # Vectorized individual-based stochastic simulator
@@ -70,7 +70,9 @@ Outputs (`infected_counts.csv`, `mean_id50.csv`, and `wave_dynamics.png`) are sa
 import sys
 sys.path.insert(0, "src")
 
-from gray_immunity import ModelParameters, run_simulation, plot_wave_dynamics
+from parameters import ModelParameters
+from simulation import run_simulation
+from visualization import plot_wave_dynamics
 
 params = ModelParameters(N=5000, T=500, r=0.1, seed=42)
 result = run_simulation(params)

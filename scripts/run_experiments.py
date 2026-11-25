@@ -9,7 +9,9 @@ import numpy as np
 # Allow running directly from repository root without installing package
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from gray_immunity import ModelParameters, plot_wave_dynamics, run_simulation
+from parameters import ModelParameters
+from simulation import run_simulation
+from visualization import plot_wave_dynamics
 
 
 def main() -> None:
